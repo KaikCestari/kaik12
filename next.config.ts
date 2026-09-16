@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async headers() {
-    return [{ source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-cache, no-store, must-revalidate" }] }];
+    return [
+      { source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-cache, no-store, must-revalidate" }] },
+      { source: "/login", headers: [{ key: "Cache-Control", value: "no-store, no-cache, must-revalidate, max-age=0" }] },
+      { source: "/api/auth/login", headers: [{ key: "Cache-Control", value: "no-store, no-cache, must-revalidate, max-age=0" }] },
+      { source: "/api/auth/me", headers: [{ key: "Cache-Control", value: "no-store, no-cache, must-revalidate, max-age=0" }] },
+    ];
   },
   experimental: {
     // Avoid the CLI subprocess in restricted environments while preserving
