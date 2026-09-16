@@ -1,0 +1,31 @@
+{
+  "name": "sabom",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "supabase:bootstrap": "node --env-file-if-exists=.env.local scripts/bootstrap-supabase.mjs",
+    "supabase:reset-admin": "node --env-file-if-exists=.env.local scripts/reset-admin-password.mjs",
+    "test:supabase": "node --test tests/supabase.test.mjs",
+    "supabase:check": "node --env-file-if-exists=.env.local scripts/check-supabase.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.116.0",
+    "lucide-react": "^0.468.0",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "16.3.4",
+    "typescript": "^5.7.2"
+  }
+}

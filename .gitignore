@@ -1,0 +1,8 @@
+.next/
+node_modules/
+data/*.sqlite
+data/*.sqlite-*
+.env*
+!.env.example
+data/supabase-import.sql
+data/supabase-bootstrap-*.sql

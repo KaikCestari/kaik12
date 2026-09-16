@@ -1,0 +1,3 @@
+-- O esquema canônico está em supabase/migrations/.
+-- Aplique todos os arquivos dessa pasta em ordem de nome.
+-- Este arquivo não cria tabelas e não deve substituir as migrations.
